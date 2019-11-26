@@ -47,6 +47,8 @@
 namespace pbrt {
 
 // Sampling Declarations
+void RelaxedPoissonSample1D(Float *samp, int nSamples);
+void RelaxedPoissonSample2D(Point2f *samp, int nSamples);
 void StratifiedSample1D(Float *samples, int nsamples, RNG &rng,
                         bool jitter = true);
 void StratifiedSample2D(Point2f *samples, int nx, int ny, RNG &rng,

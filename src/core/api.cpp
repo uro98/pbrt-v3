@@ -827,6 +827,8 @@ std::shared_ptr<Sampler> MakeSampler(const std::string &name,
         sampler = CreateSobolSampler(paramSet, film->GetSampleBounds());
     else if (name == "random")
         sampler = CreateRandomSampler(paramSet);
+    else if (name == "relaxedpoisson")
+        sampler = CreateGaussJitterSampler(paramSet);
     else if (name == "stratified")
         sampler = CreateStratifiedSampler(paramSet);
     else

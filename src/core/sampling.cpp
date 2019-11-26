@@ -35,10 +35,108 @@
 #include "sampling.h"
 #include "geometry.h"
 #include "shape.h"
+#include <set>
+#include <cmath>
+#include <ctime>
 
 namespace pbrt {
 
 // Sampling Function Definitions
+// multiple pixels, each pixel has multiple samples, each sample is a vector
+
+// for one pixel, one dimension
+void RelaxedPoissonSample1D(Float *samp, int nSamples) {
+    std::set<int> samples;
+    float minDist = 50;
+	int maxNumOfTries = 5;
+    int numOfSamplesSoFar = 0;
+	srand(time(NULL));
+
+	while (numOfSamplesSoFar < nSamples) {
+		int currentTry = 0;
+
+		while (currentTry < maxNumOfTries) {
+			bool isTooClose = false;
+			float sample = ((double) rand() / (RAND_MAX)) + 1;
+
+			for (int s : samples) {
+				if (isCloserThanMinDist(minDist, sample, s)) {
+					isTooClose = true;
+				}
+			}
+
+			if (!isTooClose) {
+				samples.insert(sample);
+				samp[numOfSamplesSoFar] = std::min(sample, OneMinusEpsilon);
+                numOfSamplesSoFar++;
+				break;
+			}
+
+			currentTry++;
+		}
+
+		if (currentTry >= maxNumOfTries) {
+			minDist *= 0.99;
+			maxNumOfTries *= 1.09;
+
+			if (minDist < 10) {
+				minDist = 10;
+			}
+			
+			if (minDist == 10) {
+				break;
+			}
+		}
+	}
+}
+
+void RelaxedPoissonSample2D(Point2f *samp, int nSamples) {
+    std::set<std::pair<int, int>> samples;
+	float minDist = 50;
+	int maxNumOfTries = 5;
+    int numOfSamplesSoFar = 0;
+	srand(time(NULL));
+
+	while (numOfSamplesSoFar < nSamples) {
+		int currentTry = 0;
+
+		while (currentTry < maxNumOfTries) {
+			bool isTooClose = false;
+			std::pair<int, int> sample = std::make_pair(((double) rand() / (RAND_MAX)) + 1, ((double) rand() / (RAND_MAX)) + 1);
+
+			for (std::pair<int, int> s : samples) {
+				if (isCloserThanMinDist(minDist, sample, s)) {
+					isTooClose = true;
+				}
+			}
+
+			if (!isTooClose) {
+				samples.insert(sample);
+                samp->x = std::min(sample.first, OneMinusEpsilon);
+                samp->y = std::min(sample.second, OneMinusEpsilon);
+                ++samp;
+                numOfSamplesSoFar++;
+				break;
+			}
+
+			currentTry++;
+		}
+
+		if (currentTry >= maxNumOfTries) {
+			minDist *= 0.99;
+			maxNumOfTries *= 1.09;
+
+			if (minDist < 10) {
+				minDist = 10;
+			}
+			
+			if (minDist == 10) {
+				break;
+			}
+		}
+	}
+}
+
 void StratifiedSample1D(Float *samp, int nSamples, RNG &rng, bool jitter) {
     Float invNSamples = (Float)1 / nSamples;
     for (int i = 0; i < nSamples; ++i) {

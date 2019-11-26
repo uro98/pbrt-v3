@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EBF59DAD-7759-30D3-8EF2-20D63751EA26}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Dropbox\pbrt-v3\src\ext\zlib;D:\Dropbox\pbrt-v3\build\src\ext\zlib;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Imath;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Half;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Iex;D:\Dropbox\pbrt-v3\src\ext\openexr\OpenEXR\IlmImf;D:\Dropbox\pbrt-v3\build\src\ext\openexr\IlmBase\config;D:\Dropbox\pbrt-v3\build\src\ext\openexr\OpenEXR\config;D:\Dropbox\pbrt-v3\src\ext\glog\src;D:\Dropbox\pbrt-v3\build\src\ext\glog;D:\Dropbox\pbrt-v3\src\ext\ptex\src\ptex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Dropbox\pbrt-v3\src\ext\zlib;D:\Dropbox\pbrt-v3\build\src\ext\zlib;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Imath;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Half;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Iex;D:\Dropbox\pbrt-v3\src\ext\openexr\OpenEXR\IlmImf;D:\Dropbox\pbrt-v3\build\src\ext\openexr\IlmBase\config;D:\Dropbox\pbrt-v3\build\src\ext\openexr\OpenEXR\config;D:\Dropbox\pbrt-v3\src\ext\glog\src;D:\Dropbox\pbrt-v3\build\src\ext\glog;D:\Dropbox\pbrt-v3\src\ext\ptex\src\ptex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Dropbox\pbrt-v3\src\ext\zlib;D:\Dropbox\pbrt-v3\build\src\ext\zlib;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Imath;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Half;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Iex;D:\Dropbox\pbrt-v3\src\ext\openexr\OpenEXR\IlmImf;D:\Dropbox\pbrt-v3\build\src\ext\openexr\IlmBase\config;D:\Dropbox\pbrt-v3\build\src\ext\openexr\OpenEXR\config;D:\Dropbox\pbrt-v3\src\ext\glog\src;D:\Dropbox\pbrt-v3\build\src\ext\glog;D:\Dropbox\pbrt-v3\src\ext\ptex\src\ptex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>D:\Dropbox\pbrt-v3\src\ext\zlib;D:\Dropbox\pbrt-v3\build\src\ext\zlib;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Imath;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Half;D:\Dropbox\pbrt-v3\src\ext\openexr\IlmBase\Iex;D:\Dropbox\pbrt-v3\src\ext\openexr\OpenEXR\IlmImf;D:\Dropbox\pbrt-v3\build\src\ext\openexr\IlmBase\config;D:\Dropbox\pbrt-v3\build\src\ext\openexr\OpenEXR\config;D:\Dropbox\pbrt-v3\src\ext\glog\src;D:\Dropbox\pbrt-v3\build\src\ext\glog;D:\Dropbox\pbrt-v3\src\ext\ptex\src\ptex;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Dropbox\pbrt-v3\src\ext\ptex\CMakeLists.txt">
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Dropbox/pbrt-v3/src/ext/ptex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Dropbox/pbrt-v3 -BD:/Dropbox/pbrt-v3/build --check-stamp-file D:/Dropbox/pbrt-v3/build/src/ext/ptex/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Dropbox\pbrt-v3\build\src\ext\ptex\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Dropbox/pbrt-v3/src/ext/ptex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Dropbox/pbrt-v3 -BD:/Dropbox/pbrt-v3/build --check-stamp-file D:/Dropbox/pbrt-v3/build/src/ext/ptex/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Dropbox\pbrt-v3\build\src\ext\ptex\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Dropbox/pbrt-v3/src/ext/ptex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Dropbox/pbrt-v3 -BD:/Dropbox/pbrt-v3/build --check-stamp-file D:/Dropbox/pbrt-v3/build/src/ext/ptex/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Dropbox\pbrt-v3\build\src\ext\ptex\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Dropbox/pbrt-v3/src/ext/ptex/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/Dropbox/pbrt-v3 -BD:/Dropbox/pbrt-v3/build --check-stamp-file D:/Dropbox/pbrt-v3/build/src/ext/ptex/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.16\Modules\CTest.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestTargets.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CTestUseLaunchers.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\DartConfiguration.tcl.in;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\FindZLIB.cmake;C:\Program Files\CMake\share\cmake-3.16\Modules\GNUInstallDirs.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Dropbox\pbrt-v3\build\src\ext\ptex\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\ZERO_CHECK.vcxproj">
+      <Project>{644612FE-C99A-39F9-83A6-F37583D4B0E3}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\src\ext\ptex\src\ptex\Ptex_static.vcxproj">
+      <Project>{98766747-AC97-3AAA-8553-827A0465DE86}</Project>
+      <Name>Ptex_static</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\src\ext\ptex\src\tests\ftest.vcxproj">
+      <Project>{B8C6247B-D7D9-33B7-8681-2EFCAE284BCC}</Project>
+      <Name>ftest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\src\ext\ptex\src\tests\halftest.vcxproj">
+      <Project>{4890A449-9B6C-3F76-B378-BD57D0EDD6E4}</Project>
+      <Name>halftest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\src\ext\ptex\src\utils\ptxinfo.vcxproj">
+      <Project>{6D6C3DD3-837B-3DDB-8B21-2A28C2843DCE}</Project>
+      <Name>ptxinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\src\ext\ptex\src\tests\rtest.vcxproj">
+      <Project>{CF2C1F69-C53A-32EF-B5A4-5B4C4073EF3A}</Project>
+      <Name>rtest</Name>
+    </ProjectReference>
+    <ProjectReference Include="D:\Dropbox\pbrt-v3\build\src\ext\ptex\src\tests\wtest.vcxproj">
+      <Project>{5663FA4C-C8E9-3CFE-AA14-A656FAA2CE3D}</Project>
+      <Name>wtest</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
